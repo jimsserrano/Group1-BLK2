@@ -27,6 +27,7 @@
 			</div>
 		</center>
 		<center><h1 style="color: #ffff; padding-top: 7px; margin-bottom: 1px;">Lets TRY!</h1></center>
+		
 		<center>
 		<div class="container">
 			<div class="hold">
@@ -36,8 +37,10 @@
 
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer1">
+
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check1" onclick="checkAnswer1()">CHECK</button>
+						<p style="color: green;" id="text1" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -49,8 +52,9 @@
 
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer2">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check2" type="submit" onclick="checkAnswer2()">CHECK</button>
+						<p style="color: green;" id="text2" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -61,8 +65,9 @@
 						Calculate: 2,243 + 650 =
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer3">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check3" type="submit" onclick="checkAnswer3()">CHECK</button>
+						<p style="color: green;" id="text3" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -74,14 +79,15 @@
 
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer4">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check4" type="submit" onclick="checkAnswer4()">CHECK</button>
+						<p style="color: green;" id="text4" hidden="true"></p>
 					</div>
 				</div>
 			</div>
 		</div>
 		</center>
-
+	
 	<center><h1 style="color: #ffff; font-weight: bold; margin-bottom: 1px;">Calculator</h1></center>
 	  <div>   
         <form name="calculator">
@@ -119,6 +125,81 @@
            </table>
         </form>
     </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+		function checkAnswer1() {
+			
+  		var x = document.getElementById("answer1").value
+  if (x == "288") {
+  	 document.getElementById("text1").removeAttribute("hidden");
+    document.getElementById("text1").style.color = "green";
+    document.getElementById('text1').innerHTML="Correct!, Good job";
+
+    
+  }
+  else{
+  	document.getElementById("text1").removeAttribute("hidden");
+    document.getElementById("text1").style.color = "red";
+    document.getElementById('text1').innerHTML="Wrong Try Again";
+  }
+}
+
+  function checkAnswer2() {
+			
+  		var x = document.getElementById("answer2").value
+  if (x == "1793") {
+  	 document.getElementById("text2").removeAttribute("hidden");
+    document.getElementById("text2").style.color = "green";
+    document.getElementById('text2').innerHTML="Correct!, Good job";
+
+    
+  }
+  else{
+  	document.getElementById("text2").removeAttribute("hidden");
+    document.getElementById("text2").style.color = "red";
+    document.getElementById('text2').innerHTML="Wrong Try Again";
+  }
+  }
+
+
+  function checkAnswer3() {
+			
+  		var x = document.getElementById("answer3").value
+  if (x == "2893") {
+  	 document.getElementById("text3").removeAttribute("hidden");
+    document.getElementById("text3").style.color = "green";
+    document.getElementById('text3').innerHTML="Correct!, Good job";
+
+    
+  }
+  else{
+  	document.getElementById("text3").removeAttribute("hidden");
+    document.getElementById("text3").style.color = "red";
+    document.getElementById('text3').innerHTML="Wrong Try Again";
+  }
+  }
+
+  function checkAnswer4() {
+			
+  		var x = document.getElementById("answer4").value
+  if (x == "160") {
+  	 document.getElementById("text4").removeAttribute("hidden");
+    document.getElementById("text4").style.color = "green";
+    document.getElementById('text4').innerHTML="Correct!, Good job";
+
+    
+  }
+  else{
+  	document.getElementById("text4").removeAttribute("hidden");
+    document.getElementById("text4").style.color = "red";
+    document.getElementById('text4').innerHTML="Wrong Try Again";
+  }
+  }
+
+</script>
 
 </body>
 </html>
