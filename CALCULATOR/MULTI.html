@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+
+		<div class="topnav">
+		  <a href="HOME.html">Home</a>
+		  <a  href="addition.html">ADDITION</a>
+		  <a  href="SUBS.html">SUBTRACTION</a>
+		  <a class="active" href="MULTI.html">MULTIPLICATION</a>
+		  <a href="DIVI.html">DIVISION</a>
+		  <a href="aboutUs.html">ABOUT</a>
+		</div>
+
+		<center>
+			<div class="text">
+				<h1 style="color: #93bf9e; font-weight: bold;">MULTIPLICATION</h1>
+				<p>
+					Multiplication also combines multiple quantities into a single quantity, called the product. In fact, multiplication can be thought of as a consolidation of many additions.
+				</p>
+			</div>
+		</center>
+		<center><h1 style="color: #ffff; padding-top: 7px; margin-bottom: 1px;">Lets TRY!</h1></center>
+		<center>
+		<div class="container">
+			<div class="hold">
+				<div class="tanong">
+					<p>
+						Calculate: 100 x 350 =
+
+					</p>
+					<div style="padding-bottom: 10px;">
+						<input type="" name="answer">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="hold">
+				<div class="tanong">
+					<p>
+						Calculate: 1,243 x 550 =
+
+					</p>
+					<div style="padding-bottom: 10px;">
+						<input type="" name="answer">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="hold">
+				<div class="tanong">
+					<p>
+						Calculate: 2,243 x 650 =
+					</p>
+					<div style="padding-bottom: 10px;">
+						<input type="" name="answer">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="hold">
+				<div class="tanong">
+					<p>
+						Calculate: 150 x 10 =
+
+					</p>
+					<div style="padding-bottom: 10px;">
+						<input type="" name="answer">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</center>
+
+	<center><h1 style="color: #ffff; font-weight: bold; margin-bottom: 1px;">Calculator</h1></center>
+	  <div>   
+        <form name="calculator">
+           <table>
+              <tr>
+                 <td colspan="4">
+                    <input type="text" name="display" id="display" disabled>
+                 </td>
+              </tr>
+              <tr>
+                    <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+             </tr>
+             <tr>
+                    <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                    <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    
+             </tr>
+             <tr>
+                    <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                    <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                    
+             </tr>
+             <tr>
+                    <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+                    <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                 
+              
+              </tr>
+           </table>
+        </form>
+    </div>
+
+</body>
+</html>	
