@@ -6,38 +6,54 @@
 </head>
 <body>
 
-		<div class="topnav">
-		  <a href="HOME.html">Home</a>
-		  <a  href="addition.html">ADDITION</a>
-		  <a class="active" href="SUBS.html">SUBTRACTION</a>
-		  <a href="MULTI.html">MULTIPLICATION</a>
-		  <a href="DIVI.html">DIVISION</a>
-		  <a href="aboutUs.html">ABOUT</a>
+	<div class="topnav">
+	  <a href="HOME.html">Home</a>
+	  <a  href="addition.html">ADDITION</a>
+	  <a class="active" href="SUBS.html">SUBTRACTION</a>
+	  <a href="MULTI.html">MULTIPLICATION</a>
+	  <a href="DIVI.html">DIVISION</a>
+	  <a href="aboutUs.html">ABOUT</a>
+	</div>
+	
+	<center>
+		<div class="text">
+			<h1 style="color: #93bf9e; font-weight: bold;">SUBTRACTION</h1>
+			<p>
+				Subtraction is the opposite of addition. Instead of adding quantities together, we are removing one quantity from another to find the difference between the two.
+			</p>
+			<p>
+				Continuing the previous example, say you start with a group of 5 boxes. If you then remove 3 boxes from that group, you are left with 2 boxes.
+			</p>
 		</div>
-
-		<center>
-			<div class="text">
-				<h1 style="color: #93bf9e; font-weight: bold;">SUBTRACTION</h1>
-				<p>
-					Subtraction is the opposite of addition. Instead of adding quantities together, we are removing one quantity from another to find the difference between the two.
-				</p>
-				<p>
-					Continuing the previous example, say you start with a group of 5 boxes. If you then remove 3 boxes from that group, you are left with 2 boxes.
-				</p>
-			</div>
-		</center>
-		<center><h1 style="color: #ffff; padding-top: 7px; margin-bottom: 1px;">Lets TRY!</h1></center>
-		<center>
+	</center>
+	<center><h1 style="color: #ffff; padding-top: 7px; margin-bottom: 1px;">Lets TRY!</h1></center>
+	
+	<center>
 		<div class="container">
 			<div class="hold">
 				<div class="tanong">
 					<p>
-						Calculate: 1,243 - 550 =
-
+						Mr. Daniel had 39 goats in a pasture. When he opened the pasture gate, 13 goats went out. How many goats remained in the pasture? 
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer1">
+
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check1" onclick="checkAnswer1()">CHECK</button>
+						<p style="color: green;" id="text1" hidden="true"></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="hold">
+				<div class="tanong">
+					<p>
+						Calculate: 1,342 - 85 =
+					</p>
+					<div style="padding-bottom: 10px;">
+						<input type="" id="answer2">
+
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check2" type="submit" onclick="checkAnswer2()">CHECK</button>
+						<p style="color: green;" id="text2" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -46,11 +62,11 @@
 				<div class="tanong">
 					<p>
 						Calculate: 1,000 - 50 =
-
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer3">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check3" type="submit" onclick="checkAnswer3()">CHECK</button>
+						<p style="color: green;" id="text3" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -58,11 +74,12 @@
 			<div class="hold">
 				<div class="tanong">
 					<p>
-						Calculate: 2,243 - 650 =
+						Calculate: 685 - 30 =
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer4">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check4" type="submit" onclick="checkAnswer4()">CHECK</button>
+						<p style="color: green;" id="text4" hidden="true"></p>
 					</div>
 				</div>
 			</div>
@@ -70,20 +87,21 @@
 			<div class="hold">
 				<div class="tanong">
 					<p>
-						Calculate: 150 - 10 =
+						Calculate: 1238 - 19 =
 
 					</p>
 					<div style="padding-bottom: 10px;">
-						<input type="" name="answer">
-						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;">CHECK</button>
+						<input type="" id="answer5">
+						<button style="background-color: #93bf9e; border-style: none; padding: 5px; border-radius: 5px;" id="check5" type="submit" onclick="checkAnswer5()">CHECK</button>
+						<p style="color: green;" id="text5" hidden="true"></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		</center>
+	</center>
 
 	<center><h1 style="color: #ffff; font-weight: bold; margin-bottom: 1px;">Calculator</h1></center>
-	  <div>   
+	<div>   
         <form name="calculator">
            <table>
               <tr>
@@ -119,6 +137,91 @@
            </table>
         </form>
     </div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+function checkAnswer1() {
+			
+  	var x = document.getElementById("answer1").value
+  	if (x == "26") {
+  		document.getElementById("text1").removeAttribute("hidden");
+    	document.getElementById("text1").style.color = "green";
+    	document.getElementById('text1').innerHTML="Your answer is Correct! Good job.";
+  	}
+
+  	else{
+  		document.getElementById("text1").removeAttribute("hidden");
+    	document.getElementById("text1").style.color = "red";
+    	document.getElementById('text1').innerHTML="Your answer is wrong, Try Again.";
+  }
+}
+
+function checkAnswer2() {
+			
+  	var x = document.getElementById("answer2").value
+  	if (x == "1257") {
+  		document.getElementById("text2").removeAttribute("hidden");
+    	document.getElementById("text2").style.color = "green";
+    	document.getElementById('text2').innerHTML="Your answer is Correct! Good job.";
+  	}
+
+  	else{
+  		document.getElementById("text2").removeAttribute("hidden");
+    	document.getElementById("text2").style.color = "red";
+    	document.getElementById('text2').innerHTML="Your answer is wrong, Try Again.";
+  }
+}
+
+function checkAnswer3() {
+			
+  	var x = document.getElementById("answer3").value
+  	if (x == "950") {
+  		document.getElementById("text3").removeAttribute("hidden");
+    	document.getElementById("text3").style.color = "green";
+    	document.getElementById('text3').innerHTML="Your answer is Correct! Good job.";
+  	}
+
+  	else{
+  		document.getElementById("text3").removeAttribute("hidden");
+    	document.getElementById("text3").style.color = "red";
+    	document.getElementById('text3').innerHTML="Your answer is wrong, Try Again.";
+  }
+}
+
+function checkAnswer4() {
+			
+  	var x = document.getElementById("answer4").value
+  	if (x == "655") {
+  		document.getElementById("text4").removeAttribute("hidden");
+    	document.getElementById("text4").style.color = "green";
+    	document.getElementById('text4').innerHTML="Your answer is Correct! Good job.";
+	}
+
+  	else{
+  		document.getElementById("text4").removeAttribute("hidden");
+    	document.getElementById("text4").style.color = "red";
+    	document.getElementById('text4').innerHTML="Your answer is wrong, Try Again.";
+  }
+}
+
+function checkAnswer5() {
+			
+  	var x = document.getElementById("answer5").value
+  	if (x == "1219") {
+  		document.getElementById("text5").removeAttribute("hidden");
+    	document.getElementById("text5").style.color = "green";
+    	document.getElementById('text5').innerHTML="Your answer is Correct! Good job.";
+  	}
+
+  	else{
+  		document.getElementById("text5").removeAttribute("hidden");
+    	document.getElementById("text5").style.color = "red";
+    	document.getElementById('text5').innerHTML="Your answer is wrong, Try Again.";
+  }
+}
+</script>
 
 </body>
 </html>	
